@@ -1,0 +1,10 @@
+${AnsiColor.GREEN}  __  __            _                  _____       _                  _               
+${AnsiColor.GREEN}|  \/  |          | |                |_   _|     | |                (_)              
+${AnsiColor.GREEN}| \  / | ___   ___| | ___   _ _ __     | |  _ __ | |_ ___ _ ____   ___  _____      __
+${AnsiColor.GREEN}| |\/| |/ _ \ / __| |/ / | | | '_ \    | | | '_ \| __/ _ \ '__\ \ / / |/ _ \ \ /\ / /
+${AnsiColor.GREEN}| |  | | (_) | (__|   <| |_| | |_) |  _| |_| | | | ||  __/ |   \ V /| |  __/\ V  V / 
+${AnsiColor.GREEN}|_|  |_|\___/ \___|_|\_\\__,_| .__/  |_____|_| |_|\__\___|_|    \_/ |_|\___| \_/\_/  
+${AnsiColor.GREEN}                              | |                                                     
+${AnsiColor.GREEN}                              |_|                                                    
+${AnsiColor.BRIGHT_BLUE}:: Mockup Interview 🤓  :: Running Spring Boot ${spring-boot.version} ::
+:: http://www.mockupinterview.com ::${AnsiColor.DEFAULT}							  
