@@ -415,7 +415,7 @@
             </dependencies>
         </profile>
         <profile>
-            <id>heroku</id>
+            <id>prod</id>
             <build>
                 
             </build>
