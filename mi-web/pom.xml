@@ -401,6 +401,7 @@
         <!-- jhipster-needle-maven-add-dependency -->
     </dependencies>
     <build>
+		<finalName>mockupinterview</finalName>
         <defaultGoal>spring-boot:run</defaultGoal>
         <pluginManagement>
             <plugins>
