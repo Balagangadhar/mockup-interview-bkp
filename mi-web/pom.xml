@@ -725,7 +725,7 @@
             </dependencies>
         </profile>
         <profile>
-            <id>prod</id>
+            <id>heroku</id>
             <build>
                 <plugins>
                     <plugin>
