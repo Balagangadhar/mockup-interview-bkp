@@ -1,1 +1,1 @@
-web: java -jar mi-web/target/mockupinterview.war --spring.profiles.active=prod,heroku --server.port=8080
+web: java -jar mi-web/target/*.war --spring.profiles.active=prod,heroku --server.port=8080
