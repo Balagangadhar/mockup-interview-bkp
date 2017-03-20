@@ -805,9 +805,10 @@
                         <executions>
                             <execution>
                                 <goals>
-                                    <goal>build-info</goal>
+                                    <goal>repackage</goal>
                                 </goals>
                             </execution>
+							<phase>none</phase>
                         </executions>
                         <configuration>
                             <executable>true</executable>
