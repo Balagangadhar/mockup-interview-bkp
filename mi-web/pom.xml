@@ -807,8 +807,9 @@
                                 <goals>
                                     <goal>repackage</goal>
                                 </goals>
+								<phase>none</phase>
                             </execution>
-							<phase>none</phase>
+
                         </executions>
                         <configuration>
                             <executable>true</executable>
