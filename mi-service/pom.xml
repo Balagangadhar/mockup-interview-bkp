@@ -1,0 +1,24 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.sannsoft.mockupinterview</groupId>
+		<artifactId>mi-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>mi-service</artifactId>
+	<dependencies>
+		<dependency>
+			<artifactId>mi-data</artifactId>
+			<groupId>com.sannsoft.mockupinterview</groupId>
+		</dependency>
+		<dependency>
+			<artifactId>mi-vo</artifactId>
+			<groupId>com.sannsoft.mockupinterview</groupId>
+		</dependency>
+		<dependency>
+			<artifactId>mi-common</artifactId>
+			<groupId>com.sannsoft.mockupinterview</groupId>
+		</dependency>
+	</dependencies>
+</project>
