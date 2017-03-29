@@ -1,19 +1,13 @@
 package com.sannsoft.mockupinterview.web.rest;
 
-import com.sannsoft.mockupinterview.config.Constants;
-import com.codahale.metrics.annotation.Timed;
-import com.sannsoft.mockupinterview.domain.User;
-import com.sannsoft.mockupinterview.repository.UserRepository;
-import com.sannsoft.mockupinterview.repository.search.UserSearchRepository;
-import com.sannsoft.mockupinterview.security.AuthoritiesConstants;
-import com.sannsoft.mockupinterview.service.MailService;
-import com.sannsoft.mockupinterview.service.UserService;
-import com.sannsoft.mockupinterview.service.dto.UserDTO;
-import com.sannsoft.mockupinterview.web.rest.vm.ManagedUserVM;
-import com.sannsoft.mockupinterview.web.rest.util.HeaderUtil;
-import com.sannsoft.mockupinterview.web.rest.util.PaginationUtil;
-import io.github.jhipster.web.util.ResponseUtil;
-import io.swagger.annotations.ApiParam;
+import static org.elasticsearch.index.query.QueryBuilders.queryStringQuery;
+
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,15 +17,30 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.annotation.Secured;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
+import com.codahale.metrics.annotation.Timed;
+import com.sannsoft.mockupinterview.config.Constants;
+import com.sannsoft.mockupinterview.domain.User;
+import com.sannsoft.mockupinterview.repository.UserRepository;
+import com.sannsoft.mockupinterview.repository.search.UserSearchRepository;
+import com.sannsoft.mockupinterview.security.AuthoritiesConstants;
+import com.sannsoft.mockupinterview.service.MailService;
+import com.sannsoft.mockupinterview.service.UserService;
+import com.sannsoft.mockupinterview.service.dto.UserDTO;
+import com.sannsoft.mockupinterview.web.rest.util.HeaderUtil;
+import com.sannsoft.mockupinterview.web.rest.util.PaginationUtil;
+import com.sannsoft.mockupinterview.web.rest.vm.ManagedUserVM;
 
-import static org.elasticsearch.index.query.QueryBuilders.*;
+import io.github.jhipster.web.util.ResponseUtil;
+import io.swagger.annotations.ApiParam;
 
 /**
  * REST controller for managing users.

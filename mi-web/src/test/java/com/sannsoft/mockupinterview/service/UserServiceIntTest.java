@@ -1,28 +1,29 @@
 package com.sannsoft.mockupinterview.service;
 
-import com.sannsoft.mockupinterview.MockupinterviewApp;
-import com.sannsoft.mockupinterview.domain.PersistentToken;
-import com.sannsoft.mockupinterview.domain.User;
-import com.sannsoft.mockupinterview.repository.PersistentTokenRepository;
-import com.sannsoft.mockupinterview.config.Constants;
-import com.sannsoft.mockupinterview.repository.UserRepository;
-import com.sannsoft.mockupinterview.service.dto.UserDTO;
-import java.time.ZonedDateTime;
-import com.sannsoft.mockupinterview.service.util.RandomUtil;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import java.time.LocalDate;
+import java.time.ZonedDateTime;
+import java.util.List;
+import java.util.Optional;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.test.context.junit4.SpringRunner;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import java.util.Optional;
-import java.util.List;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 
-import static org.assertj.core.api.Assertions.*;
+import com.sannsoft.mockupinterview.MockupinterviewApp;
+import com.sannsoft.mockupinterview.config.Constants;
+import com.sannsoft.mockupinterview.domain.PersistentToken;
+import com.sannsoft.mockupinterview.domain.User;
+import com.sannsoft.mockupinterview.repository.PersistentTokenRepository;
+import com.sannsoft.mockupinterview.repository.UserRepository;
+import com.sannsoft.mockupinterview.service.dto.UserDTO;
+import com.sannsoft.mockupinterview.service.util.RandomUtil;
 
 /**
  * Test class for the UserResource REST controller.

@@ -1,9 +1,9 @@
 package com.sannsoft.mockupinterview.security;
 
-import com.sannsoft.mockupinterview.config.Constants;
-
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.stereotype.Component;
+
+import com.sannsoft.mockupinterview.config.Constants;
 
 /**
  * Implementation of AuditorAware based on Spring Security.

@@ -1,10 +1,9 @@
 package com.sannsoft.mockupinterview.service;
 
-import com.sannsoft.mockupinterview.domain.Authority;
-import com.sannsoft.mockupinterview.domain.User;
-import com.sannsoft.mockupinterview.repository.AuthorityRepository;
-import com.sannsoft.mockupinterview.repository.UserRepository;
-import com.sannsoft.mockupinterview.repository.search.UserSearchRepository;
+import java.util.HashSet;
+import java.util.Locale;
+import java.util.Optional;
+import java.util.Set;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -17,10 +16,11 @@ import org.springframework.social.connect.UserProfile;
 import org.springframework.social.connect.UsersConnectionRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.HashSet;
-import java.util.Locale;
-import java.util.Optional;
-import java.util.Set;
+import com.sannsoft.mockupinterview.domain.Authority;
+import com.sannsoft.mockupinterview.domain.User;
+import com.sannsoft.mockupinterview.repository.AuthorityRepository;
+import com.sannsoft.mockupinterview.repository.UserRepository;
+import com.sannsoft.mockupinterview.repository.search.UserSearchRepository;
 
 @Service
 public class SocialService {

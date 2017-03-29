@@ -1,13 +1,15 @@
 package com.sannsoft.mockupinterview.service.mapper;
 
-import com.sannsoft.mockupinterview.domain.Authority;
-import com.sannsoft.mockupinterview.domain.User;
-import com.sannsoft.mockupinterview.service.dto.UserDTO;
-import org.mapstruct.*;
-
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
+
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+
+import com.sannsoft.mockupinterview.domain.Authority;
+import com.sannsoft.mockupinterview.domain.User;
+import com.sannsoft.mockupinterview.service.dto.UserDTO;
 
 /**
  * Mapper for the entity User and its DTO UserDTO.

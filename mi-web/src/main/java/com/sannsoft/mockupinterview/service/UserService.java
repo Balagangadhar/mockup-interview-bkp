@@ -1,16 +1,11 @@
 package com.sannsoft.mockupinterview.service;
 
-import com.sannsoft.mockupinterview.domain.Authority;
-import com.sannsoft.mockupinterview.domain.User;
-import com.sannsoft.mockupinterview.repository.AuthorityRepository;
-import com.sannsoft.mockupinterview.repository.PersistentTokenRepository;
-import com.sannsoft.mockupinterview.config.Constants;
-import com.sannsoft.mockupinterview.repository.UserRepository;
-import com.sannsoft.mockupinterview.repository.search.UserSearchRepository;
-import com.sannsoft.mockupinterview.security.AuthoritiesConstants;
-import com.sannsoft.mockupinterview.security.SecurityUtils;
-import com.sannsoft.mockupinterview.service.util.RandomUtil;
-import com.sannsoft.mockupinterview.service.dto.UserDTO;
+import java.time.LocalDate;
+import java.time.ZonedDateTime;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,9 +16,17 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDate;
-import java.time.ZonedDateTime;
-import java.util.*;
+import com.sannsoft.mockupinterview.config.Constants;
+import com.sannsoft.mockupinterview.domain.Authority;
+import com.sannsoft.mockupinterview.domain.User;
+import com.sannsoft.mockupinterview.repository.AuthorityRepository;
+import com.sannsoft.mockupinterview.repository.PersistentTokenRepository;
+import com.sannsoft.mockupinterview.repository.UserRepository;
+import com.sannsoft.mockupinterview.repository.search.UserSearchRepository;
+import com.sannsoft.mockupinterview.security.AuthoritiesConstants;
+import com.sannsoft.mockupinterview.security.SecurityUtils;
+import com.sannsoft.mockupinterview.service.dto.UserDTO;
+import com.sannsoft.mockupinterview.service.util.RandomUtil;
 
 /**
  * Service class for managing users.

@@ -1,13 +1,21 @@
 package com.sannsoft.mockupinterview.web.rest;
 
-import com.sannsoft.mockupinterview.MockupinterviewApp;
-import com.sannsoft.mockupinterview.domain.User;
-import com.sannsoft.mockupinterview.repository.UserRepository;
-import com.sannsoft.mockupinterview.repository.search.UserSearchRepository;
-import com.sannsoft.mockupinterview.service.MailService;
-import com.sannsoft.mockupinterview.service.UserService;
-import com.sannsoft.mockupinterview.web.rest.errors.ExceptionTranslator;
-import com.sannsoft.mockupinterview.web.rest.vm.ManagedUserVM;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.hamcrest.Matchers.hasItem;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import javax.persistence.EntityManager;
+
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,17 +31,14 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.EntityManager;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.hamcrest.Matchers.hasItem;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import com.sannsoft.mockupinterview.MockupinterviewApp;
+import com.sannsoft.mockupinterview.domain.User;
+import com.sannsoft.mockupinterview.repository.UserRepository;
+import com.sannsoft.mockupinterview.repository.search.UserSearchRepository;
+import com.sannsoft.mockupinterview.service.MailService;
+import com.sannsoft.mockupinterview.service.UserService;
+import com.sannsoft.mockupinterview.web.rest.errors.ExceptionTranslator;
+import com.sannsoft.mockupinterview.web.rest.vm.ManagedUserVM;
 
 /**
  * Test class for the UserResource REST controller.

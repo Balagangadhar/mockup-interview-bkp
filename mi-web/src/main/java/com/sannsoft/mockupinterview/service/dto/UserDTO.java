@@ -1,16 +1,17 @@
 package com.sannsoft.mockupinterview.service.dto;
 
-import com.sannsoft.mockupinterview.config.Constants;
-
-import com.sannsoft.mockupinterview.domain.Authority;
-import com.sannsoft.mockupinterview.domain.User;
-
-import org.hibernate.validator.constraints.Email;
-
-import javax.validation.constraints.*;
 import java.time.ZonedDateTime;
 import java.util.Set;
 import java.util.stream.Collectors;
+
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
+
+import com.sannsoft.mockupinterview.config.Constants;
+import com.sannsoft.mockupinterview.domain.Authority;
+import com.sannsoft.mockupinterview.domain.User;
 
 /**
  * A DTO representing a user, with his authorities.
