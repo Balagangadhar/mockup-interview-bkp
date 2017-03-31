@@ -141,3 +141,7 @@ Desktop.ini
 ######################
 .eslintcache
 
+/mi-data/
+/mi-common/
+/mi-service/
+/mi-vo/
